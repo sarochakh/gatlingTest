@@ -23,7 +23,7 @@ class WS extends Simulation {
     .baseUrl("https://api.staging.amity.co").wsBaseUrl("wss://api.staging.amity.co")
 
   val scene = scenario("testWebSocket")
-    during(10).exec(EmitEvents.start, GetToken.start)
+    .exec(EmitEvents.start, GetToken.start)
 
   setUp(scene.inject(atOnceUsers(1)).protocols(httpProtocol))
 

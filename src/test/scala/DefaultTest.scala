@@ -14,7 +14,7 @@ class DefaultTest extends Simulation {
 
   //creating scenario object
   val scene = scenario("DefaultTest")
-    during(2 minutes){
+    .during(2 minutes){
       exec(GetToken.start) //executing GetToken for 2 minutes without any pauses
     }
 
